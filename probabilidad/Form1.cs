@@ -23,6 +23,8 @@ namespace probabilidad
         double total = 0;
         double total5 = 0;
 
+        //holis
+
         dai Dai = new dai();
         public form1()
         {
