@@ -91,6 +91,15 @@ namespace probabilidad
             int[] num = new int[cantDatos];
         }
 
+        private void BtAgregar_Click(object sender, EventArgs e)
+        {
+            ListaNumeros.Items.Add(txtDatos.Text);
+            //if (ListaNumeros.Contains )
+            //{
+
+            //}
+        }
+
         public bool validacion ()
         {
             bool noError = true;
@@ -116,6 +125,7 @@ namespace probabilidad
             }
             return noError;
         }
+
     }
 
 }

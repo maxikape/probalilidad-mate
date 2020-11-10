@@ -43,10 +43,8 @@
             this.txtcuadrado = new System.Windows.Forms.TextBox();
             this.txtvarianza = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtAgregar = new System.Windows.Forms.Button();
-            this.ListaNumeros = new System.Windows.Forms.ListBox();
-            this.TxtCantidad = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.BtAceptar = new System.Windows.Forms.Button();
+            this.txtDatos = new System.Windows.Forms.TextBox();
             this.Modatxt = new System.Windows.Forms.TextBox();
             this.Medianatxt = new System.Windows.Forms.TextBox();
             this.Mediatxt = new System.Windows.Forms.TextBox();
@@ -54,11 +52,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Btcalcular = new System.Windows.Forms.Button();
+            this.BtAgregar = new System.Windows.Forms.Button();
+            this.ListaNumeros = new System.Windows.Forms.ListBox();
+            this.TxtCantidad = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.Error1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Error2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Error3 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtDatos = new System.Windows.Forms.TextBox();
-            this.BtAceptar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgw)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Error1)).BeginInit();
@@ -76,7 +76,7 @@
             this.xfi,
             this.xi2xfi});
             this.dgw.Location = new System.Drawing.Point(8, 234);
-            this.dgw.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgw.Margin = new System.Windows.Forms.Padding(2);
             this.dgw.Name = "dgw";
             this.dgw.RowHeadersWidth = 62;
             this.dgw.RowTemplate.Height = 28;
@@ -122,7 +122,7 @@
             // btnN
             // 
             this.btnN.Location = new System.Drawing.Point(37, 45);
-            this.btnN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnN.Margin = new System.Windows.Forms.Padding(2);
             this.btnN.Name = "btnN";
             this.btnN.Size = new System.Drawing.Size(76, 29);
             this.btnN.TabIndex = 1;
@@ -133,7 +133,7 @@
             // txtN
             // 
             this.txtN.Location = new System.Drawing.Point(126, 45);
-            this.txtN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtN.Margin = new System.Windows.Forms.Padding(2);
             this.txtN.Multiline = true;
             this.txtN.Name = "txtN";
             this.txtN.Size = new System.Drawing.Size(68, 30);
@@ -142,7 +142,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(37, 87);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 29);
             this.button1.TabIndex = 3;
@@ -153,7 +153,7 @@
             // txtproducto
             // 
             this.txtproducto.Location = new System.Drawing.Point(126, 87);
-            this.txtproducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtproducto.Margin = new System.Windows.Forms.Padding(2);
             this.txtproducto.Multiline = true;
             this.txtproducto.Name = "txtproducto";
             this.txtproducto.Size = new System.Drawing.Size(68, 30);
@@ -162,7 +162,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(37, 135);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(76, 29);
             this.button2.TabIndex = 5;
@@ -173,7 +173,7 @@
             // txtcuadrado
             // 
             this.txtcuadrado.Location = new System.Drawing.Point(126, 135);
-            this.txtcuadrado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcuadrado.Margin = new System.Windows.Forms.Padding(2);
             this.txtcuadrado.Multiline = true;
             this.txtcuadrado.Name = "txtcuadrado";
             this.txtcuadrado.Size = new System.Drawing.Size(68, 30);
@@ -182,7 +182,7 @@
             // txtvarianza
             // 
             this.txtvarianza.Location = new System.Drawing.Point(126, 185);
-            this.txtvarianza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtvarianza.Margin = new System.Windows.Forms.Padding(2);
             this.txtvarianza.Multiline = true;
             this.txtvarianza.Name = "txtvarianza";
             this.txtvarianza.Size = new System.Drawing.Size(68, 30);
@@ -208,38 +208,22 @@
             this.panel1.Size = new System.Drawing.Size(571, 204);
             this.panel1.TabIndex = 8;
             // 
-            // BtAgregar
+            // BtAceptar
             // 
-            this.BtAgregar.Location = new System.Drawing.Point(124, 102);
-            this.BtAgregar.Name = "BtAgregar";
-            this.BtAgregar.Size = new System.Drawing.Size(75, 23);
-            this.BtAgregar.TabIndex = 16;
-            this.BtAgregar.Text = "Agregar";
-            this.BtAgregar.UseVisualStyleBackColor = true;
+            this.BtAceptar.Location = new System.Drawing.Point(124, 54);
+            this.BtAceptar.Name = "BtAceptar";
+            this.BtAceptar.Size = new System.Drawing.Size(75, 23);
+            this.BtAceptar.TabIndex = 32;
+            this.BtAceptar.Text = "Aceptar";
+            this.BtAceptar.UseVisualStyleBackColor = true;
+            this.BtAceptar.Click += new System.EventHandler(this.BtAceptar_Click);
             // 
-            // ListaNumeros
+            // txtDatos
             // 
-            this.ListaNumeros.FormattingEnabled = true;
-            this.ListaNumeros.Location = new System.Drawing.Point(223, 14);
-            this.ListaNumeros.Name = "ListaNumeros";
-            this.ListaNumeros.Size = new System.Drawing.Size(78, 108);
-            this.ListaNumeros.TabIndex = 15;
-            // 
-            // TxtCantidad
-            // 
-            this.TxtCantidad.Location = new System.Drawing.Point(6, 56);
-            this.TxtCantidad.Name = "TxtCantidad";
-            this.TxtCantidad.Size = new System.Drawing.Size(100, 20);
-            this.TxtCantidad.TabIndex = 14;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Ponga cuantos numeros desea agregar ";
+            this.txtDatos.Location = new System.Drawing.Point(6, 102);
+            this.txtDatos.Name = "txtDatos";
+            this.txtDatos.Size = new System.Drawing.Size(100, 20);
+            this.txtDatos.TabIndex = 31;
             // 
             // Modatxt
             // 
@@ -298,6 +282,40 @@
             this.Btcalcular.Text = "Calcular";
             this.Btcalcular.UseVisualStyleBackColor = true;
             // 
+            // BtAgregar
+            // 
+            this.BtAgregar.Location = new System.Drawing.Point(124, 102);
+            this.BtAgregar.Name = "BtAgregar";
+            this.BtAgregar.Size = new System.Drawing.Size(75, 23);
+            this.BtAgregar.TabIndex = 16;
+            this.BtAgregar.Text = "Agregar";
+            this.BtAgregar.UseVisualStyleBackColor = true;
+            this.BtAgregar.Click += new System.EventHandler(this.BtAgregar_Click);
+            // 
+            // ListaNumeros
+            // 
+            this.ListaNumeros.FormattingEnabled = true;
+            this.ListaNumeros.Location = new System.Drawing.Point(223, 14);
+            this.ListaNumeros.Name = "ListaNumeros";
+            this.ListaNumeros.Size = new System.Drawing.Size(78, 108);
+            this.ListaNumeros.TabIndex = 15;
+            // 
+            // TxtCantidad
+            // 
+            this.TxtCantidad.Location = new System.Drawing.Point(6, 56);
+            this.TxtCantidad.Name = "TxtCantidad";
+            this.TxtCantidad.Size = new System.Drawing.Size(100, 20);
+            this.TxtCantidad.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Ponga cuantos numeros desea agregar ";
+            // 
             // Error1
             // 
             this.Error1.ContainerControl = this;
@@ -309,23 +327,6 @@
             // Error3
             // 
             this.Error3.ContainerControl = this;
-            // 
-            // txtDatos
-            // 
-            this.txtDatos.Location = new System.Drawing.Point(6, 102);
-            this.txtDatos.Name = "txtDatos";
-            this.txtDatos.Size = new System.Drawing.Size(100, 20);
-            this.txtDatos.TabIndex = 31;
-            // 
-            // BtAceptar
-            // 
-            this.BtAceptar.Location = new System.Drawing.Point(124, 54);
-            this.BtAceptar.Name = "BtAceptar";
-            this.BtAceptar.Size = new System.Drawing.Size(75, 23);
-            this.BtAceptar.TabIndex = 32;
-            this.BtAceptar.Text = "Aceptar";
-            this.BtAceptar.UseVisualStyleBackColor = true;
-            this.BtAceptar.Click += new System.EventHandler(this.BtAceptar_Click);
             // 
             // form1
             // 
@@ -341,7 +342,7 @@
             this.Controls.Add(this.txtN);
             this.Controls.Add(this.btnN);
             this.Controls.Add(this.dgw);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgw)).EndInit();
