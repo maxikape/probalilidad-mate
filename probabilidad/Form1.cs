@@ -1,4 +1,5 @@
-﻿using System;
+﻿using probabilidad.calses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,7 @@ namespace probabilidad
         double total = 0;
         double total5 = 0;
 
+        dai Dai = new dai();
         public form1()
         {
             InitializeComponent();
@@ -39,7 +41,6 @@ namespace probabilidad
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //coment233333
             double total3 = 0;
             foreach (DataGridViewRow row in dgw.Rows)
             {
@@ -65,9 +66,6 @@ namespace probabilidad
                 C02 = C0 * C0;
                 XxF2 = C02 * C1;
                 dgw.Rows[e.RowIndex].Cells[4].Value = XxF2;
-
-
-
             }
         }
 
@@ -79,10 +77,45 @@ namespace probabilidad
                 double varianza;
                 total5 += Convert.ToDouble(row.Cells["xi2xfi"].Value);
                 txtcuadrado.Text = Convert.ToString(total5);
-                varianza =  (total5) * (total);
+                varianza = (total5) * (total);
                 txtvarianza.Text = varianza.ToString();
 
             }
         }
+
+        // DAI
+
+        private void BtAceptar_Click(object sender, EventArgs e)
+        {
+            int cantDatos = Convert.ToInt32(TxtCantidad.Text);
+            int[] num = new int[cantDatos];
+        }
+
+        public bool validacion ()
+        {
+            bool noError = true;
+            if (TxtCantidad.Text == string.Empty)
+            {
+                Error1.SetError(TxtCantidad, "Debe ingresar al menos un valor");
+                MessageBox.Show("Por favor ingresar cuántos valores va a utilizar");
+
+                noError = false;
+            }
+            else
+            {
+                try
+                {
+                    Dai.Cantidad = Convert.ToInt32(TxtCantidad.Text);
+                }
+                catch (Exception e)
+                {
+
+                    Error1.Clear();
+                    noError = false;
+                }
+            }
+            return noError;
+        }
     }
-    }
+
+}
