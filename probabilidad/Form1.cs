@@ -129,6 +129,7 @@ namespace probabilidad
             int moda = 0;
 
             int[] datos = new int[ListaNumeros.Items.Count];
+            int[] datos2 = new int[ListaNumeros.Items.Count];
 
             for (int i = 0; i < ListaNumeros.Items.Count; i++)
             {
@@ -137,7 +138,15 @@ namespace probabilidad
 
             for (int i = 0; i < ListaNumeros.Items.Count; i++)
             {
+                for (int j = 0; j < ListaNumeros.Items.Count; j++)
+                {
+                    datos2[j] = datos[j];
 
+                    if (datos2[j] != 0)
+                    {
+                        
+                    }
+                }
             }
             Modatxt.Text = moda.ToString();
             return moda;
