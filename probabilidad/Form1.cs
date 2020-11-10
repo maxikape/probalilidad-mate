@@ -85,46 +85,65 @@ namespace probabilidad
 
         // DAI
 
-        private void BtAceptar_Click(object sender, EventArgs e)
-        {
-            int cantDatos = Convert.ToInt32(TxtCantidad.Text);
-            int[] num = new int[cantDatos];
-        }
-
         private void BtAgregar_Click(object sender, EventArgs e)
         {
             ListaNumeros.Items.Add(txtDatos.Text);
-            //if (ListaNumeros.Contains )
-            //{
-
-            //}
         }
 
-        public bool validacion ()
+        private void Btcalcular_Click(object sender, EventArgs e)
         {
-            bool noError = true;
-            if (TxtCantidad.Text == string.Empty)
-            {
-                Error1.SetError(TxtCantidad, "Debe ingresar al menos un valor");
-                MessageBox.Show("Por favor ingresar cuántos valores va a utilizar");
-
-                noError = false;
-            }
-            else
-            {
-                try
-                {
-                    Dai.Cantidad = Convert.ToInt32(TxtCantidad.Text);
-                }
-                catch (Exception e)
-                {
-
-                    Error1.Clear();
-                    noError = false;
-                }
-            }
-            return noError;
+            Mediana();
+            Media();
+            Moda1();
         }
+
+        #region Metodos MMM
+        public double Mediana()
+        {
+            double mediana = 0;
+            foreach (object item in ListaNumeros.Items)
+            {
+                mediana += Convert.ToDouble(item) / 2;
+            }
+            Medianatxt.Text = Convert.ToString(mediana);
+
+            return mediana;
+        }
+
+        public double Media()
+        {
+            int cantDatos = ListaNumeros.Items.Count;
+            double media = 0;
+
+            foreach (object item in ListaNumeros.Items)
+            {
+                media += Convert.ToDouble(item) / cantDatos;
+            }
+            Mediatxt.Text = Convert.ToString(media);
+
+            return media;
+        }
+
+        public double Moda1()
+        {
+            int moda = 0;
+
+            int[] datos = new int[ListaNumeros.Items.Count];
+
+            for (int i = 0; i < ListaNumeros.Items.Count; i++)
+            {
+                datos[i] = Convert.ToInt32(ListaNumeros.Items[i]);
+            }
+
+            for (int i = 0; i < ListaNumeros.Items.Count; i++)
+            {
+
+            }
+            Modatxt.Text = moda.ToString();
+            return moda;
+        }
+
+        #endregion
 
     }
 

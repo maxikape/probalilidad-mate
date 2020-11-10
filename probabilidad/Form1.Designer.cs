@@ -43,7 +43,6 @@
             this.txtcuadrado = new System.Windows.Forms.TextBox();
             this.txtvarianza = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtAceptar = new System.Windows.Forms.Button();
             this.txtDatos = new System.Windows.Forms.TextBox();
             this.Modatxt = new System.Windows.Forms.TextBox();
             this.Medianatxt = new System.Windows.Forms.TextBox();
@@ -54,7 +53,6 @@
             this.Btcalcular = new System.Windows.Forms.Button();
             this.BtAgregar = new System.Windows.Forms.Button();
             this.ListaNumeros = new System.Windows.Forms.ListBox();
-            this.TxtCantidad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Error1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Error2 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -190,7 +188,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.BtAceptar);
             this.panel1.Controls.Add(this.txtDatos);
             this.panel1.Controls.Add(this.Modatxt);
             this.panel1.Controls.Add(this.Medianatxt);
@@ -201,47 +198,36 @@
             this.panel1.Controls.Add(this.Btcalcular);
             this.panel1.Controls.Add(this.BtAgregar);
             this.panel1.Controls.Add(this.ListaNumeros);
-            this.panel1.Controls.Add(this.TxtCantidad);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(8, 400);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(571, 204);
+            this.panel1.Size = new System.Drawing.Size(571, 224);
             this.panel1.TabIndex = 8;
-            // 
-            // BtAceptar
-            // 
-            this.BtAceptar.Location = new System.Drawing.Point(124, 54);
-            this.BtAceptar.Name = "BtAceptar";
-            this.BtAceptar.Size = new System.Drawing.Size(75, 23);
-            this.BtAceptar.TabIndex = 32;
-            this.BtAceptar.Text = "Aceptar";
-            this.BtAceptar.UseVisualStyleBackColor = true;
-            this.BtAceptar.Click += new System.EventHandler(this.BtAceptar_Click);
             // 
             // txtDatos
             // 
-            this.txtDatos.Location = new System.Drawing.Point(6, 102);
+            this.txtDatos.Location = new System.Drawing.Point(6, 50);
             this.txtDatos.Name = "txtDatos";
             this.txtDatos.Size = new System.Drawing.Size(100, 20);
             this.txtDatos.TabIndex = 31;
             // 
             // Modatxt
             // 
-            this.Modatxt.Location = new System.Drawing.Point(449, 156);
+            this.Modatxt.Location = new System.Drawing.Point(454, 152);
             this.Modatxt.Name = "Modatxt";
             this.Modatxt.Size = new System.Drawing.Size(100, 20);
             this.Modatxt.TabIndex = 30;
             // 
             // Medianatxt
             // 
-            this.Medianatxt.Location = new System.Drawing.Point(449, 115);
+            this.Medianatxt.Location = new System.Drawing.Point(454, 111);
             this.Medianatxt.Name = "Medianatxt";
             this.Medianatxt.Size = new System.Drawing.Size(100, 20);
             this.Medianatxt.TabIndex = 29;
             // 
             // Mediatxt
             // 
-            this.Mediatxt.Location = new System.Drawing.Point(449, 74);
+            this.Mediatxt.Location = new System.Drawing.Point(454, 70);
             this.Mediatxt.Name = "Mediatxt";
             this.Mediatxt.Size = new System.Drawing.Size(100, 20);
             this.Mediatxt.TabIndex = 28;
@@ -249,7 +235,7 @@
             // Moda
             // 
             this.Moda.AutoSize = true;
-            this.Moda.Location = new System.Drawing.Point(328, 156);
+            this.Moda.Location = new System.Drawing.Point(333, 152);
             this.Moda.Name = "Moda";
             this.Moda.Size = new System.Drawing.Size(34, 13);
             this.Moda.TabIndex = 27;
@@ -258,7 +244,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(328, 115);
+            this.label3.Location = new System.Drawing.Point(333, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 13);
             this.label3.TabIndex = 26;
@@ -267,7 +253,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(328, 77);
+            this.label2.Location = new System.Drawing.Point(333, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 25;
@@ -275,16 +261,17 @@
             // 
             // Btcalcular
             // 
-            this.Btcalcular.Location = new System.Drawing.Point(449, 14);
+            this.Btcalcular.Location = new System.Drawing.Point(211, 111);
             this.Btcalcular.Name = "Btcalcular";
             this.Btcalcular.Size = new System.Drawing.Size(75, 23);
             this.Btcalcular.TabIndex = 24;
             this.Btcalcular.Text = "Calcular";
             this.Btcalcular.UseVisualStyleBackColor = true;
+            this.Btcalcular.Click += new System.EventHandler(this.Btcalcular_Click);
             // 
             // BtAgregar
             // 
-            this.BtAgregar.Location = new System.Drawing.Point(124, 102);
+            this.BtAgregar.Location = new System.Drawing.Point(133, 47);
             this.BtAgregar.Name = "BtAgregar";
             this.BtAgregar.Size = new System.Drawing.Size(75, 23);
             this.BtAgregar.TabIndex = 16;
@@ -295,26 +282,19 @@
             // ListaNumeros
             // 
             this.ListaNumeros.FormattingEnabled = true;
-            this.ListaNumeros.Location = new System.Drawing.Point(223, 14);
+            this.ListaNumeros.Location = new System.Drawing.Point(70, 93);
             this.ListaNumeros.Name = "ListaNumeros";
-            this.ListaNumeros.Size = new System.Drawing.Size(78, 108);
+            this.ListaNumeros.Size = new System.Drawing.Size(99, 108);
             this.ListaNumeros.TabIndex = 15;
-            // 
-            // TxtCantidad
-            // 
-            this.TxtCantidad.Location = new System.Drawing.Point(6, 56);
-            this.TxtCantidad.Name = "TxtCantidad";
-            this.TxtCantidad.Size = new System.Drawing.Size(100, 20);
-            this.TxtCantidad.TabIndex = 14;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 14);
+            this.label1.Location = new System.Drawing.Point(4, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 13);
+            this.label1.Size = new System.Drawing.Size(345, 13);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Ponga cuantos numeros desea agregar ";
+            this.label1.Text = "Ingrese los datos de los cuales desea calcular: Media - Mediana - Moda";
             // 
             // Error1
             // 
@@ -381,12 +361,10 @@
         private System.Windows.Forms.Button Btcalcular;
         private System.Windows.Forms.Button BtAgregar;
         private System.Windows.Forms.ListBox ListaNumeros;
-        private System.Windows.Forms.TextBox TxtCantidad;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider Error1;
         private System.Windows.Forms.ErrorProvider Error2;
         private System.Windows.Forms.ErrorProvider Error3;
-        private System.Windows.Forms.Button BtAceptar;
         private System.Windows.Forms.TextBox txtDatos;
     }
 }
