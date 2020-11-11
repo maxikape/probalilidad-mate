@@ -22,6 +22,19 @@ namespace probabilidad
         double XxF2 = 0;
         double total = 0;  // 
         double total5 = 0;
+        double total3 = 0;//
+        double varianza;// este dividido n
+
+        double PerceColum = 0;
+        double percentil = 0;
+
+        //calcular varianza
+        double var1;
+        double var2;
+        double resultadovarianza;
+        //desvtipica
+        double var3;
+
 
         dai Dai = new dai();
         public form1()
@@ -97,8 +110,7 @@ namespace probabilidad
             Moda1();
         }
 
-        #region Metodos MMM
-
+        
         public void MetodoBurbuja()
         {
             int t;
@@ -189,25 +201,25 @@ namespace probabilidad
             txtTipica.Text = Convert.ToString(var3);
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
+        //private void button3_Click(object sender, EventArgs e)
+        //{
 
             
-            var1 = (varianza / total) / 100;
-            var2 = (total3 / total) * (total3 / total);
-            resultadovarianza =var1 - var2;
-            txtvarianzaM.Text = Convert.ToString(resultadovarianza);
+        //    var1 = (varianza / total) / 100;
+        //    var2 = (total3 / total) * (total3 / total);
+        //    resultadovarianza =var1 - var2;
+        //    txtvarianzaM.Text = Convert.ToString(resultadovarianza);
 
 
 
-        }
+        //}
 
-        private void button4_Click(object sender, EventArgs e)
-        {
+        //private void button4_Click(object sender, EventArgs e)
+        //{
 
-            var3 = Math.Sqrt(resultadovarianza);
-            txtTipica.Text = Convert.ToString(var3);
-        }
+        //    var3 = Math.Sqrt(resultadovarianza);
+        //    txtTipica.Text = Convert.ToString(var3);
+        //}
 
 
         // hacer tabla frecuencia absoluta acumulada para comparar percentil
