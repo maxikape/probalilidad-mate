@@ -59,6 +59,22 @@
             this.Error1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Error2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Error3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.txtvarianzaM = new System.Windows.Forms.TextBox();
+            this.txtTipica = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.txtPercentilMuestra = new System.Windows.Forms.TextBox();
+            this.btnPercentil = new System.Windows.Forms.Button();
+            this.txtPercentil = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgw)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Error1)).BeginInit();
@@ -75,12 +91,12 @@
             this.Xixfi,
             this.xfi,
             this.xi2xfi});
-            this.dgw.Location = new System.Drawing.Point(8, 234);
+            this.dgw.Location = new System.Drawing.Point(291, 66);
             this.dgw.Margin = new System.Windows.Forms.Padding(2);
             this.dgw.Name = "dgw";
             this.dgw.RowHeadersWidth = 62;
             this.dgw.RowTemplate.Height = 28;
-            this.dgw.Size = new System.Drawing.Size(814, 117);
+            this.dgw.Size = new System.Drawing.Size(919, 293);
             this.dgw.TabIndex = 0;
             this.dgw.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgw_CellEndEdit_1);
             // 
@@ -181,7 +197,7 @@
             // 
             // txtvarianza
             // 
-            this.txtvarianza.Location = new System.Drawing.Point(126, 185);
+            this.txtvarianza.Location = new System.Drawing.Point(139, 365);
             this.txtvarianza.Margin = new System.Windows.Forms.Padding(2);
             this.txtvarianza.Multiline = true;
             this.txtvarianza.Name = "txtvarianza";
@@ -328,11 +344,176 @@
             // 
             this.Error3.ContainerControl = this;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(494, 51);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(110, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "frecuencias absolutas";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(661, 51);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "media";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(814, 42);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "label7";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(949, 42);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "desviacion tipica";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(347, 42);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Datos";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(65, 30);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Datos";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(65, 76);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(35, 13);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "media";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(34, 120);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(86, 13);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "desviacion tipica";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(41, 189);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(0, 13);
+            this.label12.TabIndex = 20;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(44, 204);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(76, 29);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "varianza";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // txtvarianzaM
+            // 
+            this.txtvarianzaM.Location = new System.Drawing.Point(139, 203);
+            this.txtvarianzaM.Margin = new System.Windows.Forms.Padding(2);
+            this.txtvarianzaM.Multiline = true;
+            this.txtvarianzaM.Name = "txtvarianzaM";
+            this.txtvarianzaM.Size = new System.Drawing.Size(68, 30);
+            this.txtvarianzaM.TabIndex = 21;
+            // 
+            // txtTipica
+            // 
+            this.txtTipica.Location = new System.Drawing.Point(139, 249);
+            this.txtTipica.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTipica.Multiline = true;
+            this.txtTipica.Name = "txtTipica";
+            this.txtTipica.Size = new System.Drawing.Size(68, 30);
+            this.txtTipica.TabIndex = 23;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(44, 250);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(76, 29);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "Dsv Tipica";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // txtPercentilMuestra
+            // 
+            this.txtPercentilMuestra.Location = new System.Drawing.Point(149, 298);
+            this.txtPercentilMuestra.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPercentilMuestra.Multiline = true;
+            this.txtPercentilMuestra.Name = "txtPercentilMuestra";
+            this.txtPercentilMuestra.Size = new System.Drawing.Size(68, 30);
+            this.txtPercentilMuestra.TabIndex = 25;
+            // 
+            // btnPercentil
+            // 
+            this.btnPercentil.Location = new System.Drawing.Point(54, 299);
+            this.btnPercentil.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPercentil.Name = "btnPercentil";
+            this.btnPercentil.Size = new System.Drawing.Size(76, 29);
+            this.btnPercentil.TabIndex = 24;
+            this.btnPercentil.Text = "Percentil";
+            this.btnPercentil.UseVisualStyleBackColor = true;
+            this.btnPercentil.Click += new System.EventHandler(this.btnPercentil_Click);
+            // 
+            // txtPercentil
+            // 
+            this.txtPercentil.Location = new System.Drawing.Point(11, 298);
+            this.txtPercentil.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPercentil.Multiline = true;
+            this.txtPercentil.Name = "txtPercentil";
+            this.txtPercentil.Size = new System.Drawing.Size(34, 30);
+            this.txtPercentil.TabIndex = 27;
+            // 
             // form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1520, 826);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.txtPercentil);
+            this.Controls.Add(this.txtPercentilMuestra);
+            this.Controls.Add(this.btnPercentil);
+            this.Controls.Add(this.txtTipica);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.txtvarianzaM);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtvarianza);
             this.Controls.Add(this.txtcuadrado);
@@ -388,6 +569,22 @@
         private System.Windows.Forms.ErrorProvider Error3;
         private System.Windows.Forms.Button BtAceptar;
         private System.Windows.Forms.TextBox txtDatos;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtvarianzaM;
+        private System.Windows.Forms.TextBox txtTipica;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox txtPercentil;
+        private System.Windows.Forms.TextBox txtPercentilMuestra;
+        private System.Windows.Forms.Button btnPercentil;
     }
 }
 
