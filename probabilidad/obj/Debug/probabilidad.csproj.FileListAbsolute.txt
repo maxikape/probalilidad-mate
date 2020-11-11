@@ -18,3 +18,13 @@ C:\Users\Administrador\Documents\GitHub\probalilidad-mate\probabilidad\obj\Debug
 C:\Users\Administrador\Documents\GitHub\probalilidad-mate\probabilidad\obj\Debug\probabilidad.csproj.CoreCompileInputs.cache
 C:\Users\Administrador\Documents\GitHub\probalilidad-mate\probabilidad\obj\Debug\probabilidad.exe
 C:\Users\Administrador\Documents\GitHub\probalilidad-mate\probabilidad\obj\Debug\probabilidad.pdb
+E:\Github\probalilidad-mate\probabilidad\bin\Debug\probabilidad.exe.config
+E:\Github\probalilidad-mate\probabilidad\bin\Debug\probabilidad.exe
+E:\Github\probalilidad-mate\probabilidad\bin\Debug\probabilidad.pdb
+E:\Github\probalilidad-mate\probabilidad\obj\Debug\probabilidad.csprojAssemblyReference.cache
+E:\Github\probalilidad-mate\probabilidad\obj\Debug\probabilidad.form1.resources
+E:\Github\probalilidad-mate\probabilidad\obj\Debug\probabilidad.Properties.Resources.resources
+E:\Github\probalilidad-mate\probabilidad\obj\Debug\probabilidad.csproj.GenerateResource.cache
+E:\Github\probalilidad-mate\probabilidad\obj\Debug\probabilidad.csproj.CoreCompileInputs.cache
+E:\Github\probalilidad-mate\probabilidad\obj\Debug\probabilidad.exe
+E:\Github\probalilidad-mate\probabilidad\obj\Debug\probabilidad.pdb

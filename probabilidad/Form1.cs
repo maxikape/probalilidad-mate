@@ -23,8 +23,6 @@ namespace probabilidad
         double total = 0;
         double total5 = 0;
 
-        //holis
-
         dai Dai = new dai();
         public form1()
         {
@@ -34,7 +32,7 @@ namespace probabilidad
         private void btnN_Click(object sender, EventArgs e)
         {
             double total = 0;
-            foreach (DataGridViewRow row in dgw.Rows)
+            foreach(DataGridViewRow row in dgw.Rows)
             {
                 total += Convert.ToDouble(row.Cells["fi"].Value);
                 txtN.Text = Convert.ToString(total);
@@ -44,7 +42,7 @@ namespace probabilidad
         private void button1_Click(object sender, EventArgs e)
         {
             double total3 = 0;
-            foreach (DataGridViewRow row in dgw.Rows)
+            foreach(DataGridViewRow row in dgw.Rows)
             {
                 total3 += Convert.ToDouble(row.Cells["Xixfi"].Value);
                 txtproducto.Text = Convert.ToString(total3);
@@ -58,7 +56,7 @@ namespace probabilidad
 
         private void dgw_CellEndEdit_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgw.Columns[e.ColumnIndex].Name == "fi")
+            if(dgw.Columns[e.ColumnIndex].Name == "fi")
             {
                 C0 = double.Parse(dgw.Rows[e.RowIndex].Cells[0].Value.ToString());
                 C1 = double.Parse(dgw.Rows[e.RowIndex].Cells[1].Value.ToString());
@@ -74,7 +72,7 @@ namespace probabilidad
         private void button2_Click(object sender, EventArgs e)
         {
             ///confirmar3
-            foreach (DataGridViewRow row in dgw.Rows)
+            foreach(DataGridViewRow row in dgw.Rows)
             {
                 double varianza;
                 total5 += Convert.ToDouble(row.Cells["xi2xfi"].Value);
@@ -90,6 +88,7 @@ namespace probabilidad
         private void BtAgregar_Click(object sender, EventArgs e)
         {
             ListaNumeros.Items.Add(txtDatos.Text);
+            MetodoBurbuja();
         }
 
         private void Btcalcular_Click(object sender, EventArgs e)
@@ -100,58 +99,75 @@ namespace probabilidad
         }
 
         #region Metodos MMM
-        public double Mediana()
-        {
-            double mediana = 0;
-            foreach (object item in ListaNumeros.Items)
-            {
-                mediana += Convert.ToDouble(item) / 2;
-            }
-            Medianatxt.Text = Convert.ToString(mediana);
 
-            return mediana;
+        public void MetodoBurbuja()
+        {
+            int t;
+            for(int a = 1; a < ListaNumeros.Items.Count; a++)
+                for(int b = ListaNumeros.Items.Count - 1; b >= a; b--)
+                {
+                    if(Convert.ToInt32(ListaNumeros.Items[b - 1]) > Convert.ToInt32(ListaNumeros.Items[b]))
+                    {
+                        t = Convert.ToInt32(ListaNumeros.Items[b - 1]);
+                        ListaNumeros.Items[b - 1] = Convert.ToInt32(ListaNumeros.Items[b]);
+                        ListaNumeros.Items[b] = t;
+                    }
+                }
         }
 
-        public double Media()
+        public void Mediana()
+        {
+            double mediana = 0;
+            int pos = ListaNumeros.Items.Count / 2;
+            if(ListaNumeros.Items.Count / 2 != 0 && ListaNumeros.Items.Count % 2 == 0)
+            {
+                mediana = (Convert.ToDouble(ListaNumeros.Items[pos - 1]) + Convert.ToDouble(ListaNumeros.Items[pos])) / 2;
+            }
+            else
+            {
+                mediana = Convert.ToDouble(ListaNumeros.Items[pos]);
+            }
+            Medianatxt.Text = mediana.ToString();
+        }
+
+        public void Media()
         {
             int cantDatos = ListaNumeros.Items.Count;
             double media = 0;
 
-            foreach (object item in ListaNumeros.Items)
+            foreach(object item in ListaNumeros.Items)
             {
                 media += Convert.ToDouble(item) / cantDatos;
             }
             Mediatxt.Text = Convert.ToString(media);
 
-            return media;
         }
 
-        public double Moda1()
+        public void Moda1()
         {
-            int moda = 0;
-
-            int[] datos = new int[ListaNumeros.Items.Count];
-            int[] datos2 = new int[ListaNumeros.Items.Count];
-
-            for (int i = 0; i < ListaNumeros.Items.Count; i++)
+            for(int i = 0; i < ListaNumeros.Items.Count; i++)
             {
-                datos[i] = Convert.ToInt32(ListaNumeros.Items[i]);
-            }
 
-            for (int i = 0; i < ListaNumeros.Items.Count; i++)
-            {
-                for (int j = 0; j < ListaNumeros.Items.Count; j++)
+                double mPrimero = Convert.ToDouble(ListaNumeros.Items[i]);
+                int conDesp = 0;
+                int conAnte = 0;
+                for(int j = 0; j < ListaNumeros.Items.Count; j++)
                 {
-                    datos2[j] = datos[j];
-
-                    if (datos2[j] != 0)
+                    double msegundo = Convert.ToDouble(ListaNumeros.Items[j]);
+                    if(mPrimero == msegundo)
                     {
-                        
+                        conDesp++;
+                    }
+                }
+                if(conDesp != 1)
+                {
+                    if(conAnte < conDesp)
+                    {
+                        conAnte = conDesp;
+                        Modatxt.Text = mPrimero.ToString();
                     }
                 }
             }
-            Modatxt.Text = moda.ToString();
-            return moda;
         }
 
         #endregion
