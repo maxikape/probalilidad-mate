@@ -20,8 +20,21 @@ namespace probabilidad
         double C02 = 0;
         double C12 = 0;
         double XxF2 = 0;
-        double total = 0;
+        double total = 0;  // 
         double total5 = 0;
+        double total3 = 0;//
+        double varianza;// este dividido n
+
+        double PerceColum = 0;
+
+        //calcular varianza
+        double var1;
+        double var2;
+        double resultadovarianza;
+        //desvtipica
+        double var3;
+
+
 
         dai Dai = new dai();
         public form1()
@@ -31,7 +44,7 @@ namespace probabilidad
 
         private void btnN_Click(object sender, EventArgs e)
         {
-            double total = 0;
+            
             foreach (DataGridViewRow row in dgw.Rows)
             {
                 total += Convert.ToDouble(row.Cells["fi"].Value);
@@ -41,7 +54,7 @@ namespace probabilidad
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double total3 = 0;
+            
             foreach (DataGridViewRow row in dgw.Rows)
             {
                 total3 += Convert.ToDouble(row.Cells["Xixfi"].Value);
@@ -64,7 +77,7 @@ namespace probabilidad
                 dgw.Rows[e.RowIndex].Cells[2].Value = XxF;
 
                 C02 = C0 * C0;
-                XxF2 = C02 * C1;
+                XxF2 = C02 * C1; 
                 dgw.Rows[e.RowIndex].Cells[4].Value = XxF2;
             }
         }
@@ -74,7 +87,6 @@ namespace probabilidad
             ///confirmar3
             foreach (DataGridViewRow row in dgw.Rows)
             {
-                double varianza;
                 total5 += Convert.ToDouble(row.Cells["xi2xfi"].Value);
                 txtcuadrado.Text = Convert.ToString(total5);
                 varianza = (total5) * (total);
@@ -126,6 +138,34 @@ namespace probabilidad
             return noError;
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            
+            var1 = (varianza / total) / 100;
+            var2 = (total3 / total) * (total3 / total);
+            resultadovarianza =var1 - var2;
+            txtvarianzaM.Text = Convert.ToString(resultadovarianza);
+
+
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            var3 = Math.Sqrt(resultadovarianza);
+            txtTipica.Text = Convert.ToString(var3);
+        }
+
+
+        // hacer tabla frecuencia absoluta acumulada para comparar percentil
+        private void btnPercentil_Click(object sender, EventArgs e)
+        {
+            double perce;
+            perce = int.Parse(txtPercentil.Text) * total / 100;  
+            
+        }
     }
 
 }
